@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+rg --passthru --colors match:fg:0 --colors match:bg:229 '(Leandro Alemão|Steven Woods)'
