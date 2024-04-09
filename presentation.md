@@ -14,12 +14,26 @@ header-includes:
 * previously worked on [School Experience](https://github.com/DFE-Digital/schools-experience), [Curriculum materials](https://github.com/DFE-Digital/curriculum-materials/) and [Get Into Teaching](https://github.com/DFE-Digital/get-into-teaching-app)
 * built and maintain some gems
 
-## What is ECF?
+## What is CPD? 🦒
 
 - **ECF** stands for the Early Careers Framework
-- **NPQ** stands for National Professional Qualificiations
+- **NPQ** stands for National Professional Qualifications
 - **CPD** stands for Continuing Professional Development
 - **CPD = ECF + NPQ**
+
+## What are NPQs?
+
+NPQs are voluntary qualifications that teachers can apply to do to further
+their career.
+
+They might help a teacher progress to being a head of department, an
+expert in a particular subject or in becoming a headteacher.
+
+## What is ECF?
+
+All new teachers are _Early Career Teachers_ for the first two
+years of their induction. During this time they have access
+to a mentor and a set of training materials.
 
 ## Overview
 
@@ -69,6 +83,7 @@ header-includes:
 
 * only 5 months between the first commit and opening registration for all schools
 * it took us nearly 5 months to recover after 2022's registration period
+* no private beta 😩
 * our support queries in 2022 fell into two main categories:
   1. things which people wanted to but couldn't change via the user interface (numerous, shallow)
   2. data quality problems (few, deep)
@@ -85,7 +100,7 @@ header-includes:
 
 ---
 
-![CPD team contributions](images/contributions.png){height=250}
+![CPD team contributions to the ECF repository](images/contributions.png){height=250}
 
 ---
 
@@ -143,11 +158,17 @@ Finding the current induction record is **a real problem**.
 
 ## Solving the ownership problem
 
-![CPD separated overview](images/cpd-separated-overview.png){height=250}
+We're going to make NPQ a standalone service.
+
+* two policies
+* ~~three~~ two teams
+* two repositories
+* two databases
+* ~~one~~ two APIs
 
 ---
 
-NPQ separation current status: **In progress**.
+![CPD separated overview](images/cpd-separated-overview.png){height=250}
 
 ---
 
@@ -158,6 +179,21 @@ NPQ separation current status: **In progress**.
 
 ---
 
-![Standalone NPQ interface preview](images/npq-separation-in-progress.png){height=250}
+## Improving things we do poorly in ECF
 
-## Rewriting ECF
+![Standalone NPQ interface preview showing the API documentation and the statements list in the admin console](images/npq-separation-in-progress.png){height=250}
+
+# Second, rewriting ECF
+
+## We're about to start
+
+There isn't really much to show yet, but we're starting **very soon**.
+
+## Approach
+
+* Use what we learnt during the NPQ separation
+* Early focus on building tooling we can share between ECF and NPQ, like:
+  - multi-step forms
+  - admin structure and navigation
+  - GOV.UK-style Swagger documentation
+* Solve the most complicated data problems first
